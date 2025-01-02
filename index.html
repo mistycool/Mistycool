@@ -1,139 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MistyCool Coin</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background: #000;
-            color: #FFD700;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        header h1 {
-            font-size: 48px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px #333;
-        }
-        header p {
-            font-size: 18px;
-            color: #FFF;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background: #333;
-        }
-        nav .logo img {
-            width: 60px;
-            height: auto;
-        }
-        nav .menu {
-            display: flex;
-            gap: 15px;
-        }
-        nav .menu a {
-            color: #FFF;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-        .countdown {
-            font-size: 24px;
-            color: #000;
-            margin: 20px 0;
-        }
-        footer {
-            background: #333;
-            color: #FFF;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <script>
-        // Countdown Timer Script
-        function countdown() {
-            const launchDate = new Date("2025-01-31T00:00:00").getTime();
-            const now = new Date().getTime();
-            const diff = launchDate - now;
+# Recreate the updated MistyCool HTML file with MistyCool-specific content
+updated_html_content = """
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MistyCool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-diamond"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>MistyCool</h1>
+								<p>MistyCool: Your Path to Financial Freedom, inspired by the loyalty and trust of the golden retriever. Join us in revolutionizing the crypto world.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Welcome</a></li>
+								<li><a href="#mission">Mission</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
 
-            if (diff < 0) {
-                clearInterval(timer);
-                document.getElementById("timer").innerHTML = "Launched!";
-            }
-        }
-        const timer = setInterval(countdown, 1000);
-    </script>
-</head>
-<body>
-    <header>
-        <h1>MistyCool</h1>
-        <p>"Your Path to Financial Freedom"</p>
-    </header>
-    <nav>
-        <div class="logo">
-            <img src="images/50F3DECD-9129-42F0-A45D-F1F5D309493C.png" alt="MistyCool Logo">
-        </div>
-        <div class="menu">
-            <a href="#about">About</a>
-            <a href="#presale">Presale Plans</a>
-            <a href="#launch">Launch Plans</a>
-            <a href="whitepaper.pdf" target="_blank">White Paper</a>
-            <a href="#social">Social Media</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-    </nav>
-    <div class="content">
-        <div id="about">
-            <h2>About MistyCool</h2>
-            <p>MistyCool is a cryptocurrency aimed at providing financial freedom for everyone. Inspired by the golden retriever's loyalty, we bring transparency and trust to the crypto world.</p>
-        </div>
-        <div id="presale">
-            <h2>Presale Plans</h2>
-            <p>Details about the presale plans go here.</p>
-        </div>
-        <div id="launch">
-            <h2>Launch Plans</h2>
-            <p>Details about the launch plans go here.</p>
-        </div>
-        <div class="countdown">
-            <h2>Countdown to Launch:</h2>
-            <p id="timer"></p>
-        </div>
-        <div id="social">
-            <h2>Follow Us</h2>
-            <p>Facebook | X | YouTube | Telegram</p>
-        </div>
-        <div id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: mistycool666@gmail.com</p>
-        </div>
-    </div>
-    <footer>
-        &copy; 2025 MistyCool. All Rights Reserved.
-    </footer>
-</body>
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Welcome -->
+							<article id="intro">
+								<h2 class="major">Welcome to MistyCool</h2>
+								<span class="image main"><img src="images/mistycool.jpg" alt="MistyCool" /></span>
+								<p>MistyCool combines trust, transparency, and innovation to create a reliable cryptocurrency platform. Discover how we're shaping the future of blockchain technology.</p>
+							</article>
+
+						<!-- Mission -->
+							<article id="mission">
+								<h2 class="major">Our Mission</h2>
+								<span class="image main"><img src="images/mission.jpg" alt="Mission" /></span>
+								<p>We aim to empower individuals through financial freedom and transparency. MistyCool is dedicated to creating real-world applications that inspire trust and foster innovation.</p>
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About MistyCool</h2>
+								<span class="image main"><img src="images/about.jpg" alt="About MistyCool" /></span>
+								<p>Inspired by the golden retriever's qualities of loyalty and trust, MistyCool brings innovation to the blockchain space. Join our journey to revolutionize the way the world views cryptocurrency.</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact Us</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+									<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; MistyCool 2025. All rights reserved.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
+"""
+
+# Save the updated HTML to a new file
+updated_file_path = "/mnt/data/index_mistycool.html"
+with open(updated_file_path, "w") as file:
+    file.write(updated_html_content)
+
+updated_file_path
