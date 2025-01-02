@@ -10,137 +10,120 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-diamond"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>MistyCool</h1>
-								<p>MistyCool: Your Path to Financial Freedom, inspired by the loyalty and trust of the golden retriever. Join us in revolutionizing the crypto world.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Welcome</a></li>
-								<li><a href="#mission">Mission</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="#whitepaper">White Paper</a></li>
-								<li><a href="#presale">Presale</a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Welcome -->
-							<article id="intro">
-								<h2 class="major">Welcome to MistyCool</h2>
-								<span class="image main"><img src="" alt="MistyCool" /></span>
-								<p>MistyCool combines trust, transparency, and innovation to create a reliable cryptocurrency platform. Discover how we're shaping the future of blockchain technology.</p>
-							</article>
-
-						<!-- Mission -->
-							<article id="mission">
-								<h2 class="major">Our Mission</h2>
-								<span class="image main"><img src="images/mission.jpg" alt="Mission" /></span>
-								<p>We aim to empower individuals through financial freedom and transparency. MistyCool is dedicated to creating real-world applications that inspire trust and foster innovation.</p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About MistyCool</h2>
-								<span class="image main"><img src="images/about.jpg" alt="About MistyCool" /></span>
-								<p>Inspired by the golden retriever's qualities of loyalty and trust, MistyCool brings innovation to the blockchain space. Join our journey to revolutionize the way the world views cryptocurrency.</p>
-							</article>
-
-						<!-- White Paper -->
-							<article id="whitepaper">
-								<h2 class="major">White Paper</h2>
-								<p>Learn all about MistyCool in our detailed White Paper. Click the button below to view it in a new tab.</p>
-								<ul class="actions">
-									<li><a href="Whitepaper/MistyCool_White_Paper_Corrected.pdf" target="_blank" class="button">View White Paper</a></li>
-								</ul>
-							</article>
-
-						<!-- Presale -->
-							<article id="presale">
-								<h2 class="major">Presale</h2>
-								<p>Don't miss out on the presale! Be part of MistyCool's journey. The countdown below shows how much time is left:</p>
-								<div id="countdown" style="text-align:center; font-size:1.5rem; margin-top:1rem;"></div>
-								<script>
-									// Countdown Timer
-									const targetDate = new Date("2025-01-31T00:00:00").getTime();
-									const timer = setInterval(function () {
-										const now = new Date().getTime();
-										const distance = targetDate - now;
-										const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-										const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-										const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
-										const seconds = Math.floor((distance % (1000)) / 1000);
-										document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-										if (distance < 0) {
-											clearInterval(timer);
-											document.getElementById("countdown").innerHTML = "Presale Ended";
-										}
-									}, 1000);
-								</script>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact Us</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-									<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
-								</ul>
-							</article>
-
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					<span class="icon fa-diamond"></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>MistyCool</h1>
+						<p>MistyCool: Your Path to Financial Freedom, inspired by the loyalty and trust of the golden retriever. Join us in revolutionizing the crypto world.</p>
 					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#intro">Welcome</a></li>
+						<li><a href="#mission">Mission</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#whitepaper">White Paper</a></li>
+						<li><a href="#presale">Presale</a></li>
+					</ul>
+				</nav>
+			</header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; MistyCool 2025. All rights reserved.</p>
-					</footer>
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Welcome -->
+				<article id="intro">
+					<h2 class="major">Welcome to MistyCool</h2>
+					<span class="image main"><img src="" alt="MistyCool" /></span>
+					<p>MistyCool combines trust, transparency, and innovation to create a reliable cryptocurrency platform. Discover how we're shaping the future of blockchain technology.</p>
+				</article>
+
+				<!-- Mission -->
+				<article id="mission">
+					<h2 class="major">Our Mission</h2>
+					<span class="image main"><img src="images/mission.jpg" alt="Mission" /></span>
+					<p>We aim to empower individuals through financial freedom and transparency. MistyCool is dedicated to creating real-world applications that inspire trust and foster innovation.</p>
+				</article>
+
+				<!-- About -->
+				<article id="about">
+					<h2 class="major">About MistyCool</h2>
+					<span class="image main"><img src="images/about.jpg" alt="About MistyCool" /></span>
+					<p>Inspired by the golden retriever's qualities of loyalty and trust, MistyCool brings innovation to the blockchain space. Join our journey to revolutionize the way the world views cryptocurrency.</p>
+				</article>
+
+				<!-- White Paper -->
+				<article id="whitepaper">
+					<h2 class="major">White Paper</h2>
+					<p>Learn all about MistyCool in our detailed White Paper. Click the button below to view it in a new tab.</p>
+					<ul class="actions">
+						<li><a href="Whitepaper/MistyCool_White_Paper_Corrected.pdf" target="_blank" class="button">View White Paper</a></li>
+					</ul>
+				</article>
+
+				<!-- Presale -->
+				<article id="presale">
+					<h2 class="major">Presale</h2>
+					<p>Don't miss out on the presale! Be part of MistyCool's journey. The countdown below shows how much time is left:</p>
+					<div id="countdown" style="text-align:center; font-size:1.5rem; margin-top:1rem;"></div>
+					<script>
+						const targetDate = new Date("2025-01-31T00:00:00").getTime();
+						const timer = setInterval(function () {
+							const now = new Date().getTime();
+							const distance = targetDate - now;
+							const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+							const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+							const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+							const seconds = Math.floor((distance % (1000)) / 1000);
+							document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+							if (distance < 0) {
+								clearInterval(timer);
+								document.getElementById("countdown").innerHTML = "Presale Ended";
+							}
+						}, 1000);
+					</script>
+				</article>
+
+				<!-- Contact -->
+				<article id="contact">
+					<h2 class="major">Contact Us</h2>
+					<p>Click the link below to fill out our contact form:</p>
+					<ul class="actions">
+						<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScVkD7S4XvhJWzwEOnCMzt1l3aKs7MX8G_vYlpvKsVmBrxLBA/viewform?usp=header" target="_blank" class="button">Contact Form</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+						<li><a href="#" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+				</article>
 
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; MistyCool 2025. All rights reserved.</p>
+			</footer>
+
+		</div>
+
 		<!-- BG -->
-			<div id="bg"></div>
+		<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
