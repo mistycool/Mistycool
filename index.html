@@ -3,60 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MistyCool - Inspired by a golden retriever">
-    <meta name="keywords" content="MistyCool, Golden Retriever, Pet, Cool, Community">
-    <meta name="author" content="Your Name">
-    <title>MistyCool</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>MistyCool Coin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #333;
+        }
+        header p {
+            font-size: 18px;
+            color: #FFF;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #333;
+        }
+        nav .logo img {
+            width: 60px;
+            height: auto;
+        }
+        nav .menu {
+            display: flex;
+            gap: 15px;
+        }
+        nav .menu a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .countdown {
+            font-size: 24px;
+            color: #000;
+            margin: 20px 0;
+        }
+        footer {
+            background: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Countdown Timer Script
+        function countdown() {
+            const launchDate = new Date("2025-01-31T00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = launchDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (diff < 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "Launched!";
+            }
+        }
+        const timer = setInterval(countdown, 1000);
+    </script>
 </head>
 <body>
-  <!-- Banner Section -->
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Welcome to MistyCool</h1>
-        <p>Inspired by the golden retriever who brings joy and coolness to life.</p>
-        <button onclick="scrollToSection('about')">Learn More</button>
+    <header>
+        <h1>MistyCool</h1>
+        <p>"Your Path to Financial Freedom"</p>
     </header>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About MistyCool</h2>
-        <p>MistyCool is a project inspired by the vibrant and loyal nature of golden retrievers.</p>
-        <img src="images/729AFA3A-1DF4-4278-BD06-A157B7F71C53.png" alt="Golden Retriever">
-    </section>
-
-    <!-- Future Goals -->
-    <section id="goals" class="section">
-        <h2>Our Future Goals</h2>
-        <ul>
-            <li>Expand the MistyCool community globally.</li>
-            <li>Launch a dedicated MistyCool app for pet lovers.</li>
-            <li>Support animal shelters and welfare organizations.</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
+    <nav>
+        <div class="logo">
+            <img src="mistycool_logo.png" alt="MistyCool Logo">
+        </div>
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="#presale">Presale Plans</a>
+            <a href="#launch">Launch Plans</a>
+            <a href="whitepaper.pdf" target="_blank">White Paper</a>
+            <a href="#social">Social Media</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div id="about">
+            <h2>About MistyCool</h2>
+            <p>MistyCool is a cryptocurrency aimed at providing financial freedom for everyone. Inspired by the golden retriever's loyalty, we bring transparency and trust to the crypto world.</p>
+        </div>
+        <div id="presale">
+            <h2>Presale Plans</h2>
+            <p>Details about the presale plans go here.</p>
+        </div>
+        <div id="launch">
+            <h2>Launch Plans</h2>
+            <p>Details about the launch plans go here.</p>
+        </div>
+        <div class="countdown">
+            <h2>Countdown to Launch:</h2>
+            <p id="timer"></p>
+        </div>
+        <div id="social">
+            <h2>Follow Us</h2>
+            <p>Facebook | X | YouTube | Telegram</p>
+        </div>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: mistycool666@gmail.com</p>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2024 MistyCool. All rights reserved.</p>
-        <div class="social-media">
-    <a href="#">Facebook</a>
-    <a href="https://twitter.com/mistycool666" target="_blank">
-        <img src="images/IMG_0933.webp" alt="X Logo" style="width: 19px; height: 19px;">
-    </a>
-    <a href="#">Instagram</a>
-</div>
+        &copy; 2025 MistyCool. All Rights Reserved.
     </footer>
 </body>
 </html>
