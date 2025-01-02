@@ -41,42 +41,7 @@
 				<!-- Contact -->
 				<article id="contact">
 					<h2 class="major">Contact Us</h2>
-					
-					<?php
-					if ($_SERVER["REQUEST_METHOD"] == "POST") {
-						require 'src/PHPMailer.php';
-						require 'src/SMTP.php';
-						require 'src/Exception.php';
-
-						use PHPMailer\PHPMailer\PHPMailer;
-
-						$mail = new PHPMailer(true);
-
-						try {
-							$mail->isSMTP();
-							$mail->Host = 'smtp.gmail.com';
-							$mail->SMTPAuth = true;
-							$mail->Username = 'madilovesu@gmail.com';
-							$mail->Password = 'iumb geqp nwtu zutz';
-							$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-							$mail->Port = 587;
-
-							$mail->setFrom('madilovesu@gmail.com', 'MistyCool Website');
-							$mail->addAddress('madilovesu@gmail.com');
-
-							$mail->isHTML(true);
-							$mail->Subject = 'New Contact Form Submission';
-							$mail->Body = "Name: " . htmlspecialchars($_POST['name']) . "<br>Email: " . htmlspecialchars($_POST['email']) . "<br>Message: " . htmlspecialchars($_POST['message']);
-
-							$mail->send();
-							echo '<p style="color: green;">Message sent successfully!</p>';
-						} catch (Exception $e) {
-							echo '<p style="color: red;">Message could not be sent. Mailer Error: ' . $mail->ErrorInfo . '</p>';
-						}
-					}
-					?>
-
-					<form method="post" action="#contact">
+					<form method="post" action="http://mistycool.lovestoblog.com/contact.php">
 						<div class="fields">
 							<div class="field half">
 								<label for="name">Name</label>
