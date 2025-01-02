@@ -78,6 +78,38 @@
 											<textarea name="message" id="message" rows="4"></textarea>
 										</div>
 									</div>
+									<!-- White Paper Section -->
+<article id="whitepaper">
+    <h2 class="major">White Paper</h2>
+    <p>Learn all about MistyCool in our detailed White Paper. Click the button below to view it in a new tab.</p>
+    <ul class="actions">
+        <li><a href="whitepaper.pdf" target="_blank" class="button">View White Paper</a></li>
+    </ul>
+</article>
+
+<!-- Presale Section -->
+<article id="presale">
+    <h2 class="major">Presale</h2>
+    <p>Don't miss out on the presale! Be part of MistyCool's journey. The countdown below shows how much time is left:</p>
+    <div id="countdown" style="text-align:center; font-size:1.5rem; margin-top:1rem;"></div>
+    <script>
+        // Countdown Timer
+        const targetDate = new Date("2025-01-31T00:00:00").getTime();
+        const timer = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000)) / 1000);
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "Presale Ended";
+            }
+        }, 1000);
+    </script>
+</article>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
