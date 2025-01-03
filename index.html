@@ -31,6 +31,7 @@
                     <li><a href="#whitepaper">White Paper</a></li>
                     <li><a href="#presale">Presale</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#social">Social Media</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,14 +64,33 @@
             <article id="whitepaper">
                 <h2 class="major">White Paper</h2>
                 <p>Explore the MistyCool White Paper for detailed insights into our vision and strategy.</p>
-                <a href="whitepaper/mistycool_whitepaper.pdf" class="button primary" download>Download White Paper</a>
+                <a href="whitepaper/mistycool_whitepaper.pdf" class="button primary" target="_blank">View White Paper</a>
             </article>
 
             <!-- Presale -->
             <article id="presale">
                 <h2 class="major">Presale</h2>
-                <p>Be part of our journey. Join the MistyCool presale today and help us build the future of finance.</p>
-                <a href="#presale-form" class="button primary">Join Presale</a>
+                <p>Be part of our journey. Countdown to the Presale Start:</p>
+                <div id="countdown" style="text-align:center; font-size:2rem; margin-top:1rem;"></div>
+                <script>
+                    const targetDate = new Date("2025-01-31T00:00:00").getTime();
+                    const timer = setInterval(() => {
+                        const now = new Date().getTime();
+                        const distance = targetDate - now;
+
+                        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((distance % (1000)) / 1000);
+
+                        document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+                        if (distance < 0) {
+                            clearInterval(timer);
+                            document.getElementById("countdown").innerHTML = "Presale Started!";
+                        }
+                    }, 1000);
+                </script>
             </article>
 
             <!-- Contact -->
@@ -96,6 +116,17 @@
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </form>
+            </article>
+
+            <!-- Social Media -->
+            <article id="social">
+                <h2 class="major">Follow Us</h2>
+                <ul class="icons">
+                    <li><a href="https://facebook.com" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://telegram.org" target="_blank" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+                    <li><a href="https://twitter.com" target="_blank" class="icon brands fa-twitter"><span class="label">X</span></a></li>
+                    <li><a href="https://youtube.com" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                </ul>
             </article>
 
         </div>
