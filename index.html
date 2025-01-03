@@ -94,29 +94,58 @@
             </article>
 
             <!-- Contact -->
-            <article id="contact">
-                <h2 class="major">Contact Us</h2>
-                <form id="contact-form">
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" required />
-                        </div>
-                        <div class="field half">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required />
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="4" required></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                        <li><input type="reset" value="Reset" /></li>
-                    </ul>
-                </form>
-            </article>
+<article id="contact">
+    <h2 class="major">Contact Us</h2>
+    <form id="contact-form" action="https://getform.io/f/bjjjlkqb" method="POST">
+        <div class="fields">
+            <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+            </div>
+            <div class="field half">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+            </div>
+        </div>
+        <ul class="actions">
+            <li><input type="submit" value="Send Message" class="primary" /></li>
+            <li><input type="reset" value="Reset" /></li>
+        </ul>
+    </form>
+    <div id="form-response" style="margin-top: 1rem;"></div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const responseDiv = document.getElementById('form-response');
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        Accept: 'application/json',
+                    },
+                });
+
+                if (response.ok) {
+                    responseDiv.innerHTML = "<p style='color: green;'>Message sent successfully!</p>";
+                    form.reset();
+                } else {
+                    responseDiv.innerHTML = "<p style='color: red;'>Failed to send the message. Please try again.</p>";
+                }
+            } catch (error) {
+                responseDiv.innerHTML = "<p style='color: red;'>An error occurred. Please try again later.</p>";
+            }
+        });
+    </script>
+</article>
 
             <!-- Social Media -->
             <article id="social">
